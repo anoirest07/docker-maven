@@ -72,6 +72,8 @@
 					<buildArgs>
 						<WAR_FILE>target/${project.build.finalName}.jar</WAR_FILE>
 					</buildArgs>
+					<fork>true</fork>
+					<executable>C:\Program Files\Java\jdk1.8.0_45\bin\javac</executable>
 				</configuration>
 				<executions>
 					<execution>
