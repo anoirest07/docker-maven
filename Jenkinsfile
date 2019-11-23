@@ -1,15 +1,12 @@
 node{
 	        
-	        stage ('mvn clean') {
-	            
-	            sh 'mvn  clea'
+	        stage ('SCM Checkout') {
+	            git 'https://github.com/anoirest07/docker-maven-spring.git'
 	        }
 	        
-	        stage ('mvn package') {
-	            
-	            sh 'mvn  package'
+	        stage ('Compile-Package') {
+	            def mvnHome = tool name: 'Maven 3.6.2', type: 'maven'
+	            sh "${mvnHome}/bin/mvn package"
 	        }
-	        stage ('Build Docker Image'){
-	            sh 'mvn docker:build'
-	        }
+	        
 }
