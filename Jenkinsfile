@@ -1,9 +1,5 @@
 pipeline{
 	agent any
-	if (isUnix() --> sh "command"
-
-         else --> bat "command"
-	)
 	environment {
     		PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;${env.PATH}"
 	}
