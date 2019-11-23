@@ -6,7 +6,7 @@ pipeline{
 				sh 'mvn clean'
 	        	}
 		}
-	        stage ('CPackage') {
+	        stage ('Package') {
 			steps {
 	            		sh 'mvn package'
 	        	}	
