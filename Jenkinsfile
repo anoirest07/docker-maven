@@ -6,12 +6,12 @@ pipeline{
 	stages{
 	        stage ('Clean') {
 			steps {
-				sh 'mvn clean'
+				bat 'mvn clean'
 	        	}
 		}
 	        stage ('Package') {
 			steps {
-	            		sh 'mvn package'
+	            		bat 'mvn package'
 	        	}	
 		}	
 	}
