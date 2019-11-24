@@ -16,12 +16,12 @@ pipeline{
 			steps {
 				bat 'dir'
 				bat 'ipconfig'
-				bat 'mvn clean -s C:/Users/anoir/.m2/settings.xml'
+				bat 'mvn clean'
 	        	}
 		}
 	        stage ('Package') {
 			steps {
-	            		bat 'mvn package -s C:/Users/anoir/.m2/settings.xml'
+	            		bat 'mvn package'
 	        	}	
 		}	
 	}
