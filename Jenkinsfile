@@ -14,7 +14,7 @@ pipeline{
 		}
 	        stage ('Clean') {
 			steps {
-				bat 'pwd'
+				bat 'dir'
 				bat 'ipconfig'
 				bat 'mvn clean -s C:/Users/anoir/.m2/settings.xml'
 	        	}
