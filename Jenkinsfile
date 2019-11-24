@@ -14,12 +14,12 @@ pipeline{
 		}
 	        stage ('Clean') {
 			steps {
-				bat 'mvn clean'
+				bat 'mvn clean -s C:\Users\anoir\.m2\settings.xml'
 	        	}
 		}
 	        stage ('Package') {
 			steps {
-	            		bat 'mvn package'
+	            		bat 'mvn package -s C:\Users\anoir\.m2\settings.xml'
 	        	}	
 		}	
 	}
