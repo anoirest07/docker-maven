@@ -73,7 +73,7 @@
 						<WAR_FILE>target/${project.build.finalName}.jar</WAR_FILE>
 					</buildArgs>
 					<fork>true</fork>
-					<executable>C:\Program Files (x86)\Jenkins\jre\bin\java.exe</executable>
+					<executable>C:\Program Files\Java\jdk1.8.0_45\bin\javac.exe</executable>
 				</configuration>
 				<executions>
 					<execution>
