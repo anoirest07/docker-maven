@@ -14,8 +14,7 @@ pipeline{
 		}
 	        stage ('Clean') {
 			steps {
-				bat 'dir'
-				bat 'ipconfig'
+				
 				bat 'mvn clean'
 	        	}
 		}
