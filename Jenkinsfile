@@ -4,25 +4,22 @@ pipeline{
 		maven 'Maven 3.6.2'
 	}
 	stages{
-		stage ('Initialize') {
-			steps{
-			bat ''' 
-				echo "PATH=${PATH}"
-				echo "M2_HOME = ${M2_HOME}"
-				'''
-			}
-		}
 	        stage ('Clean') {
 			steps {
-				
-				bat 'mvn clean'
+				sh 'mvn clean'
 	        	}
 		}
 	        stage ('Package') {
 			steps {
-	            		bat 'mvn package'
+	            		sh 'mvn package'
 	        	}	
-		}	
+		}
+		stage ('CREATE DOCKER IMAGE') {
+			steps {
+	      		sh 'mvn docker:build'
+	        	}	
+		}
+
 	}
 		
 	        
